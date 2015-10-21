@@ -8,3 +8,97 @@
 :PROPERTIES:
 :reveal_background: ./images/layers_of_web.jpg
 :END:
+
+
+* mockups
+** 
+:PROPERTIES:
+:reveal_background: ./images/dependency_graph.jpg
+:END:
+
+
+** 
+:PROPERTIES:
+:reveal_background: ./images/consulate_tablet_desktop.png
+:END:
+
+** 
+:PROPERTIES:
+:reveal_background: ./images/consulate2.png
+:END:
+
+** 
+:PROPERTIES:
+:reveal_background: ./images/consulate_tablet.jpg
+:END:
+
+
+* code
+
+** markup
+#+BEGIN_SRC html
+ <div class='wrapper'>
+  <header class='header'>
+    <div class='consulate_logo'>
+      <a href='#'>
+        <img alt='Consulate Dashboard Logo' src='./images/consulate_logo.png' ...
+      </a>
+    </div>
+  </header>
+#+END_SRC
+
+** css
+#+BEGIN_SRC css
+.consulate_logo {
+  padding-top: 1.2em;
+  position: absolute;
+  left: 1.2em;
+}
+#+END_SRC
+
+** dynamic markup
+
+*** javascript template
+#+BEGIN_SRC html
+ <div class='wrapper'>
+  <header class='header'>
+    <div class='consulate_logo'>
+      <a href='{% logo.href %}'>
+        <img alt='{% logo.name %} src='{% logo.path %}' ...
+      </a>
+    </div>
+  </header>
+#+END_SRC
+
+
+
+*** haml
+#+BEGIN_SRC haml
+.wrapper
+  .header
+    .consulate_logo
+    a{ href: "#"}
+      img{alt: "Consulate Dashboard Logo" :src "./images/consulate_logo.png"}
+
+#+END_SRC
+
+*** clojurescript
+ #+BEGIN_SRC clojure
+ (defn home-page []
+   [:div.wrapper
+    [:div.header
+     [:div.consulate_logo
+     [:a {:href "#" }
+       [:img {:alt "Consulate Dashboard Logo" :src "./images/consulate_logo.png" ...
+ #+END_SRC
+
+
+ # Local variables:
+ # buffer-save-hook: nil
+ # End:
+
+
+* Internet
+:PROPERTIES:
+:reveal_background: ./images/mr_robot.gif
+:END:

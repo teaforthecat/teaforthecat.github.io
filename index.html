@@ -32,6 +32,124 @@
 <section>
 <section id="slide-orgheadline1" data-background="./images/layers_of_web.jpg">
 <h2 id="orgheadline1"></h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h2 id="orgheadline6">mockups</h2>
+<div class="outline-text-2" id="text-orgheadline6">
+</div></section>
+<section id="slide-orgheadline2" data-background="./images/dependency_graph.jpg">
+<h3 id="orgheadline2"></h3>
+
+
+</section>
+<section id="slide-orgheadline3" data-background="./images/consulate_tablet_desktop.png">
+<h3 id="orgheadline3"></h3>
+
+</section>
+<section id="slide-orgheadline4" data-background="./images/consulate2.png">
+<h3 id="orgheadline4"></h3>
+
+</section>
+<section id="slide-orgheadline5" data-background="./images/consulate_tablet.jpg">
+<h3 id="orgheadline5"></h3>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline13">
+<h2 id="orgheadline13">code</h2>
+<div class="outline-text-2" id="text-orgheadline13">
+</div></section>
+<section id="slide-orgheadline7">
+<h3 id="orgheadline7">markup</h3>
+<div class="org-src-container">
+
+<pre  class="src src-html">&lt;<span style="color: #72aaca;">div</span> <span style="color: #f6f080;">class</span>='wrapper'&gt;
+ &lt;<span style="color: #72aaca;">header</span> <span style="color: #f6f080;">class</span>='header'&gt;
+   &lt;<span style="color: #72aaca;">div</span> <span style="color: #f6f080;">class</span>='consulate_logo'&gt;
+     &lt;<span style="color: #72aaca;">a</span> <span style="color: #f6f080;">href</span>='#'&gt;
+       &lt;<span style="color: #72aaca;">img</span> <span style="color: #f6f080;">alt</span>='Consulate Dashboard Logo' <span style="color: #f6f080;">src</span>='./images/consulate_logo.png' ...
+     &lt;/<span style="color: #72aaca;">a</span>&gt;
+   &lt;/<span style="color: #72aaca;">div</span>&gt;
+ &lt;/<span style="color: #72aaca;">header</span>&gt;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">css</h3>
+<div class="org-src-container">
+
+<pre  class="src src-css"><span style="color: #b6d877;">.consulate_logo </span>{
+  <span style="color: #72aaca;">padding-top</span>: 1.2em;
+  <span style="color: #72aaca;">position</span>: absolute;
+  <span style="color: #72aaca;">left</span>: 1.2em;
+}
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline12">
+<h3 id="orgheadline12">dynamic markup</h3>
+<div class="outline-text-3" id="text-orgheadline12">
+</div></section>
+<section id="slide-orgheadline9">
+<h4 id="orgheadline9">javascript template</h4>
+<div class="org-src-container">
+
+<pre  class="src src-html">&lt;<span style="color: #72aaca;">div</span> <span style="color: #f6f080;">class</span>='wrapper'&gt;
+ &lt;<span style="color: #72aaca;">header</span> <span style="color: #f6f080;">class</span>='header'&gt;
+   &lt;<span style="color: #72aaca;">div</span> <span style="color: #f6f080;">class</span>='consulate_logo'&gt;
+     &lt;<span style="color: #72aaca;">a</span> <span style="color: #f6f080;">href</span>='{% logo.href %}'&gt;
+       &lt;<span style="color: #72aaca;">img</span> <span style="color: #f6f080;">alt</span>='{% logo.name %} <span style="color: #f6f080;">src</span>='{% logo.path %}' ...
+     &lt;/<span style="color: #72aaca;">a</span>&gt;
+   &lt;/<span style="color: #72aaca;">div</span>&gt;
+ &lt;/<span style="color: #72aaca;">header</span>&gt;
+</pre>
+</div>
+
+
+
+</section>
+<section id="slide-orgheadline10">
+<h4 id="orgheadline10">haml</h4>
+<div class="org-src-container">
+
+<pre  class="src src-haml"><span style="color: #f6f080;">.wrapper</span>
+  <span style="color: #f6f080;">.header</span>
+    <span style="color: #f6f080;">.consulate_logo</span>
+    a{ href: "#"}
+      img{alt: "Consulate Dashboard Logo" :src "./images/consulate_logo.png"}
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline11">
+<h4 id="orgheadline11">clojurescript</h4>
+<div class="org-src-container">
+
+<pre  class="src src-clojure">(<span style="color: #fa9a4b; font-weight: bold;">defn</span> <span style="color: #72aaca;">home-page</span> []
+  [<span style="color: #b9d977;">:div.wrapper</span>
+   [<span style="color: #b9d977;">:div.header</span>
+    [<span style="color: #b9d977;">:div.consulate_logo</span>]
+    [<span style="color: #b9d977;">:a</span> {<span style="color: #b9d977;">:href</span> <span style="color: #cfe2f2;">"#"</span> }
+      [<span style="color: #b9d977;">:img</span> {<span style="color: #b9d977;">:alt</span> <span style="color: #cfe2f2;">"Consulate Dashboard Logo"</span> <span style="color: #b9d977;">:src</span> <span style="color: #cfe2f2;">"./images/consulate_logo.png"</span> ...
+</pre>
+</div>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline14" data-background="./images/mr_robot.gif">
+<h2 id="orgheadline14">Internet</h2>
 </section>
 </section>
 </div>
