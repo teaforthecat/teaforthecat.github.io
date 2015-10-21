@@ -98,7 +98,31 @@
  # End:
 
 
+* publish
+1. build
+2. deploy
+
 * Internet
 :PROPERTIES:
 :reveal_background: ./images/mr_robot.gif
 :END:
+
+* links
+
+- [[http://codecademy.com][codecademy.com]]
+- [[http://altervista.com][altervista.com]]
+- [[http://koding.com][koding.com]]
+
+** Tim Berners-Lee
+http://www.wired.com/2012/06/sir-tim-berners-lee/
+#+BEGIN_QUOTE
+“I just had to take the hypertext idea and connect it to the TCP and DNS ideas and — ta-da! — the World Wide Web”
+
+_Tim Berners-Lee_
+#+END_QUOTE
+
+*
+chris.thompson@govdelivery.com
+#+BEGIN_QUOTE
+teaforthecat.github.io
+#+END_QUOTE
