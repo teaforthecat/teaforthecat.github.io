@@ -1,0 +1,24 @@
+#+SETUPFILE: ../setup.org
+#+TITLE: html
+#+REVEAL_THEME: night
+#+REVEAL_TRANS: none
+
+
+
+* TCP/IP
+#+ATTR_HTML: :width 100%
+| =column_title1= | =column_title2= |
+|-----------------+-----------------|
+| a               | b               |
+| a               | b               |
+| a               | b               |
+
+* HTTP
+  :PROPERTIES:
+  :reveal_background: http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2013/20130318105145-1_0.jpg
+  :END:
+
+* Facebook
+  :PROPERTIES:
+  :reveal_background: http://e.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/05/3030612-poster-1280-mark-zuckerberg-30.jpg
+  :END:
