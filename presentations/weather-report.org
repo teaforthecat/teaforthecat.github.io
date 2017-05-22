@@ -59,7 +59,6 @@ delayed processing means fast response time
    :reveal_background: ../images/bones-architecture.svg
    :reveal_background_size: 90%
    :END:
-
 * Demo
 #+BEGIN_NOTES
 open login modal with dispatch
@@ -67,3 +66,7 @@ fill in and submit form with dispatch
 
 
 #+END_NOTES
+
+* References
+- [[https://www.youtube.com/watch?v=qDNPQo9UmJA&t=1852s][From REST to CQRS]]
+- [[https://www.youtube.com/watch?v=YlfA8hFs2HY][Onyx]]
