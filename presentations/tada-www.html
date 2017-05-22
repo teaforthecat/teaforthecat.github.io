@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Chris Thompson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2 class="author">Chris Thompson</h2><p class="date">Created: 2017-05-20 Sat 12:30</p>
+</section>
+
+
+
+
+<section>
+<section id="slide-orgheadline1" data-background="./images/layers_of_web.jpg">
+<h2 id="orgheadline1"></h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h2 id="orgheadline6">mockups</h2>
+<div class="outline-text-2" id="text-orgheadline6">
+</div></section>
+<section id="slide-orgheadline2" data-background="./images/dependency_graph.jpg">
+<h3 id="orgheadline2"></h3>
+
+
+</section>
+<section id="slide-orgheadline3" data-background="./images/consulate_tablet_desktop.png">
+<h3 id="orgheadline3"></h3>
+
+</section>
+<section id="slide-orgheadline4" data-background="./images/consulate2.png">
+<h3 id="orgheadline4"></h3>
+
+</section>
+<section id="slide-orgheadline5" data-background="./images/consulate_tablet.jpg">
+<h3 id="orgheadline5"></h3>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline13">
+<h2 id="orgheadline13">code</h2>
+<div class="outline-text-2" id="text-orgheadline13">
+</div></section>
+<section id="slide-orgheadline7">
+<h3 id="orgheadline7">markup</h3>
+<div class="org-src-container">
+
+<pre  class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>='wrapper'&gt;
+ &lt;<span style="color: #bc6ec5; font-weight: bold;">header</span> <span style="color: #7590db;">class</span>='header'&gt;
+   &lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>='consulate_logo'&gt;
+     &lt;<span style="color: #bc6ec5; font-weight: bold;">a</span> <span style="color: #7590db;">href</span>='#'&gt;
+       &lt;<span style="color: #bc6ec5; font-weight: bold;">img</span> <span style="color: #7590db;">alt</span>='Consulate Dashboard Logo' <span style="color: #7590db;">src</span>='./images/consulate_logo.png' ...
+     &lt;/<span style="color: #bc6ec5; font-weight: bold;">a</span>&gt;
+   &lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt;
+ &lt;/<span style="color: #bc6ec5; font-weight: bold;">header</span>&gt;
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">css</h3>
+<div class="org-src-container">
+
+<pre  class="src src-css"><span style="color: #bc6ec5; font-weight: bold;">.consulate_logo </span><span style="color: #4f97d7;">{</span>
+  <span style="color: #7590db;">padding-top</span>: <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">2em</span>;
+  <span style="color: #7590db;">position</span>: absolute;
+  <span style="color: #7590db;">left</span>: <span style="color: #a45bad;">1</span>.<span style="color: #a45bad;">2em</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline12">
+<h3 id="orgheadline12">dynamic markup</h3>
+<div class="outline-text-3" id="text-orgheadline12">
+</div></section>
+<section id="slide-orgheadline9">
+<h4 id="orgheadline9">javascript template</h4>
+<div class="org-src-container">
+
+<pre  class="src src-html">&lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>='wrapper'&gt;
+ &lt;<span style="color: #bc6ec5; font-weight: bold;">header</span> <span style="color: #7590db;">class</span>='header'&gt;
+   &lt;<span style="color: #bc6ec5; font-weight: bold;">div</span> <span style="color: #7590db;">class</span>='consulate_logo'&gt;
+     &lt;<span style="color: #bc6ec5; font-weight: bold;">a</span> <span style="color: #7590db;">href</span>='{% logo.href %}'&gt;
+       &lt;<span style="color: #bc6ec5; font-weight: bold;">img</span> <span style="color: #7590db;">alt</span>='{% logo.name %} <span style="color: #7590db;">src</span>='{% logo.path %}' ...
+     &lt;/<span style="color: #bc6ec5; font-weight: bold;">a</span>&gt;
+   &lt;/<span style="color: #bc6ec5; font-weight: bold;">div</span>&gt;
+ &lt;/<span style="color: #bc6ec5; font-weight: bold;">header</span>&gt;
+</pre>
+</div>
+
+
+
+</section>
+<section id="slide-orgheadline10">
+<h4 id="orgheadline10">haml</h4>
+<div class="org-src-container">
+
+<pre  class="src src-haml"><span style="color: #7590db;">.wrapper</span>
+  <span style="color: #7590db;">.header</span>
+    <span style="color: #7590db;">.consulate_logo</span>
+    a<span style="color: #4f97d7;">{</span> href: "#"<span style="color: #4f97d7;">}</span>
+      img<span style="color: #4f97d7;">{</span>alt: "Consulate Dashboard Logo" :src "./images/consulate_logo.png"<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline11">
+<h4 id="orgheadline11">clojurescript</h4>
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">home-page</span> <span style="color: #bc6ec5;">[]</span>
+  <span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">:div.wrapper</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">:div.header</span>
+    <span style="color: #67b11d;">[</span><span style="color: #a45bad;">:div.consulate_logo</span>
+    <span style="color: #b1951d;">[</span><span style="color: #a45bad;">:a</span> <span style="color: #4f97d7;">{</span><span style="color: #a45bad;">:href</span> <span style="color: #2d9574;">"#"</span> <span style="color: #4f97d7;">}</span>
+      <span style="color: #4f97d7;">[</span><span style="color: #a45bad;">:img</span> <span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">:alt</span> <span style="color: #2d9574;">"Consulate Dashboard Logo"</span> <span style="color: #a45bad;">:src</span> <span style="color: #2d9574;">"./images/consulate_logo.png"</span> ...
+</pre>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline14">
+<h2 id="orgheadline14">publish</h2>
+<ol>
+<li>build</li>
+<li>deploy</li>
+
+</ol>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline15" data-background="./images/mr_robot.gif">
+<h2 id="orgheadline15">Internet</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline17">
+<h2 id="orgheadline17">links</h2>
+<ul>
+<li><a href="http://codecademy.com">codecademy.com</a></li>
+<li><a href="http://altervista.com">altervista.com</a></li>
+<li><a href="http://koding.com">koding.com</a></li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline16">
+<h3 id="orgheadline16">Tim Berners-Lee</h3>
+<p>
+<a href="http://www.wired.com/2012/06/sir-tim-berners-lee/">http://www.wired.com/2012/06/sir-tim-berners-lee/</a>
+</p>
+<blockquote nil>
+<p>
+“I just had to take the hypertext idea and connect it to the TCP and DNS ideas and — ta-da! — the World Wide Web”
+</p>
+
+<p>
+<span class="underline">Tim Berners-Lee</span>
+</p>
+</blockquote>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline18">
+<h2 id="orgheadline18"></h2>
+<p>
+chris.thompson@govdelivery.com
+</p>
+<blockquote nil>
+<p>
+teaforthecat.github.io
+</p>
+</blockquote>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline19">
+<h2 id="orgheadline19">code</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
