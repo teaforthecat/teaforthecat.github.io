@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Bones</title>
+<meta name="author" content="(Chris Thompson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/simple.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<style> section.stack > section:nth-child(2) { height: 20px; } </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+    <section id="sec-title-slide"><h1 class="title">Bones</h1></section>
+
+
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1">Clojure/ClojureScript</h2>
+<ul>
+<li>Learn once, write everywhere</li>
+<li>Easy to use</li>
+
+</ul>
+<aside class="notes">
+<p>
+from react native people
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4">DDD</h2>
+<ul>
+<li>Composable</li>
+<li>Flexible</li>
+
+</ul>
+<aside class="notes">
+<p>
+
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2">Non DDD</h3>
+<div class="org-src-container">
+
+<pre  class="src src-javascript"><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">app</span> = feathers<span style="color: #4f97d7;">()</span>
+  .configure<span style="color: #4f97d7;">(</span>rest<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>
+  .use<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'/messages'</span>, <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">MessageService</span><span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>
+  .use<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'/my-service'</span>, <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">MyService</span><span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+</section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3">DDD Version</h3>
+<div class="org-src-container">
+
+<pre  class="src src-javascript"><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">app</span> = feathers<span style="color: #4f97d7;">()</span>
+  .configure<span style="color: #4f97d7;">(</span>rest<span style="color: #bc6ec5;">()</span><span style="color: #4f97d7;">)</span>
+  .use<span style="color: #4f97d7;">(</span>add-force<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span><span style="color: #67b11d;">[</span><span style="color: #2d9574;">"/messages"</span> MessageService<span style="color: #67b11d;">]</span>
+                  <span style="color: #67b11d;">[</span><span style="color: #2d9574;">"/my-service"</span> MyService<span style="color: #67b11d;">]</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+<aside class="notes">
+<p>
+clearly states intention
+<a href="https://www.cilium.io/blog/2017/5/4/demo-may-the-force-be-with-you">https://www.cilium.io/blog/2017/5/4/demo-may-the-force-be-with-you</a>
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h2 id="orgheadline6">Flow</h2>
+<ul>
+<li>Speed</li>
+<li>Control</li>
+
+</ul>
+<aside class="notes">
+<p>
+tight loops on persistent connections
+less waiting, less connecting
+manifold on server, core.async on browser
+browser click, wait for page
+buffered bulk inserts
+delayed processing means fast response time
+</p>
+
+</aside>
+</section>
+<section id="slide-orgheadline5" data-background="../images/bones-architecture.svg" data-background-size="90%">
+<h3 id="orgheadline5"></h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline9">
+<h2 id="orgheadline9">Demo</h2>
+<aside class="notes">
+<p>
+open login modal with dispatch
+fill in and submit form with dispatch
+</p>
+
+</aside>
+</section>
+<section id="slide-orgheadline7">
+<h3 id="orgheadline7">form helper</h3>
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">let</span> <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">{</span><span style="color: #a45bad;">:keys</span> <span style="color: #67b11d;">[</span>inputs state reset save edit<span style="color: #67b11d;">]</span><span style="color: #2d9574;">}</span> <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">e</span><span style="color: #b2b2b2; background-color: #292b2e;">/</span>form <span style="color: #a45bad;">:accounts</span> id<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">]</span>
+</pre>
+</div>
+</section>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">command handler</h3>
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">commands</span>
+  <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">[</span><span style="color: #a45bad;">:</span><span style="color: #ce537a; font-weight: bold;">accounts</span><span style="color: #b2b2b2; background-color: #292b2e;">/</span><span style="color: #a45bad;">upsert</span> <span style="color: #a45bad;">::accounts/upsert</span>
+    '<span style="color: #ce537a; font-weight: bold;">weather-report.core</span><span style="color: #b2b2b2; background-color: #292b2e;">/</span>add-account<span style="color: #2d9574;">]</span>
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline10">
+<h2 id="orgheadline10">References</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qDNPQo9UmJA&amp;t=1852s">From REST to CQRS</a></li>
+<li><a href="https://www.youtube.com/watch?v=YlfA8hFs2HY">Onyx</a></li>
+<li><a href="https://github.com/teaforthecat/bones">bones</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.00,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
