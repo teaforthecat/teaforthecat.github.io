@@ -4,3 +4,4 @@
 * Presentations
 - [[file:presentations/tada-www.org][Tada WWW!]]
 - [[file:presentations/weather-report.org][Weather Report]]
+- [[file:presentations/bones.org][bones]]
