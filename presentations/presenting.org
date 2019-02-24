@@ -1,0 +1,50 @@
+#+TITLE: Presenting
+#+REVEAL_THEME: night
+#+REVEAL_TRANS: none
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+OPTIONS: toc:nil num:nil date:nil
+
+
+
+* what
+- tailor the content
+- big images
+- build and repeat
+- story
+
+* how
+#+BEGIN_NOTES
+org for structure
+text for easy to change
+#+END_NOTES
+- org
+
+* why
+- ?
+
+* simple
+#+BEGIN_NOTES
+Keep it simple, no animations or decorations.
+Easy to read and easy to create.
+No mindmaps, only one or two objects with relations on the screen
+#+END_NOTES
+- text
+- big images
+
+* org
+#+BEGIN_NOTES
+Awesome with text.
+Great presentation export.
+#+END_NOTES
+
+* ox-reveal
+- themes
+- code
+- background for images
+
+* publishing
+- github
+- lots...
+
+* next steps
+https://github.com/howardabrams/demo-it

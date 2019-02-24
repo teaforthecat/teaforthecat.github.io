@@ -1,0 +1,60 @@
+#+SETUPFILE: ../setup.org
+#+TITLE: Kafka
+#+REVEAL_THEME: simple
+#+REVEAL_TRANS: none
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+# strange way of making the text a little bigger
+#+REVEAL_MARGIN: 0.001
+#+REVEAL_HEAD_PREAMBLE: <style> section.stack > section:nth-child(2) { height: 20px; } </style>
+#+OPTIONS: toc:nil num:nil date:nil
+# REVEAL_TITLE_SLIDE_BACKGROUND
+
+
+
+* Kafka ideas
+#+ATTR_REVEAL: :frag (appear)
+- replicated log
+- ↳ persistence
+- ↳ consumer tracking
+- ↳ confidence
+- ↳ design
+
+** disk love
+
+* pictures
+
+** .
+   :PROPERTIES:
+   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png
+   :reveal_background_size: 60%
+   :END:
+
+
+** .
+   :PROPERTIES:
+   :reveal_background: https://kafka.apache.org/21/images/log_consumer.png
+   :reveal_background_size: 60%
+   :END:
+
+** .
+   :PROPERTIES:
+   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png
+   :reveal_background_size: 60%
+   :END:
+
+* producer
+#+BEGIN_SRC clojure
+(produce conn {:key 123 :value "hello" :topic "greetings"})
+#+END_SRC
+
+* consumer
+#+BEGIN_SRC clojure
+(consume conn "greetings" println)
+#+END_SRC
+* resources
+
+[[https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8][brief blog post about with unique focus]]
+
+[[https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines][performance analysis from 2014]]
+
+[[https://kafka.apache.org/documentation/#persistence][an afternoon of dizzyness]]

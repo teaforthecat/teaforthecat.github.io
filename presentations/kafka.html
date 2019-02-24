@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Kafka</title>
+<meta name="author" content="(Christopher Thompson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/simple.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<style> section.stack > section:nth-child(2) { height: 20px; } </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Kafka</h1>
+</section>
+
+
+
+<section>
+<section id="slide-org4f18221">
+<h2 id="org4f18221">Kafka ideas</h2>
+<ul>
+<li class="fragment appear">replicated log</li>
+<li class="fragment appear">↳ persistence</li>
+<li class="fragment appear">↳ consumer tracking</li>
+<li class="fragment appear">↳ confidence</li>
+<li class="fragment appear">↳ design</li>
+
+</ul>
+
+</section>
+<section id="slide-org95a086d">
+<h3 id="org95a086d">disk love</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd006fe3">
+<h2 id="orgd006fe3">pictures</h2>
+<div class="outline-text-2" id="text-orgd006fe3">
+</div>
+</section>
+<section id="slide-org020dc4c" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png" data-background-size="60%">
+<h3 id="org020dc4c">.</h3>
+
+
+</section>
+<section id="slide-orgcd55fd3" data-background="https://kafka.apache.org/21/images/log_consumer.png" data-background-size="60%">
+<h3 id="orgcd55fd3">.</h3>
+
+</section>
+<section id="slide-orgf8d39e4" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png" data-background-size="60%">
+<h3 id="orgf8d39e4">.</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org0cda251">
+<h2 id="org0cda251">producer</h2>
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>produce conn <span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">:key</span> <span style="color: #a45bad;">123</span> <span style="color: #a45bad;">:value</span> <span style="color: #2d9574;">"hello"</span> <span style="color: #a45bad;">:topic</span> <span style="color: #2d9574;">"queue-123"</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org16b5336">
+<h2 id="org16b5336">consumer</h2>
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>consume conn <span style="color: #2d9574;">"queue-123"</span> println<span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgeb6d33e">
+<h2 id="orgeb6d33e">resources</h2>
+<p>
+<a href="https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8">brief blog post about with unique focus</a>
+</p>
+
+<p>
+<a href="https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines">performance analysis from 2014</a>
+</p>
+
+<p>
+<a href="https://kafka.apache.org/documentation/#persistence">an afternoon of dizzyness</a>
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.00,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

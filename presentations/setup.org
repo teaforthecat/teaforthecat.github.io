@@ -1,0 +1,5 @@
+#+SETUPFILE: ../setup.org
+#+REVEAL_THEME: night
+#+REVEAL_TRANS: none
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+OPTIONS: toc:nil num:nil date:nil

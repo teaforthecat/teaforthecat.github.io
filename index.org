@@ -1,7 +1,9 @@
-#+OPTIONS: toc:nil num:nil date:nil
+#+OPTIONS: toc:nil num:nil date:nil author:nil
 
 
 * Presentations
 - [[file:presentations/tada-www.org][Tada WWW!]]
 - [[file:presentations/weather-report.org][Weather Report]]
 - [[file:presentations/bones.org][bones]]
+- [[file:presentations/presenting.org][Presenting]]
+- [[file:presentations/kafka.org][Kafka]]
