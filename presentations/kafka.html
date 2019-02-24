@@ -33,8 +33,8 @@
 
 
 <section>
-<section id="slide-org4f18221">
-<h2 id="org4f18221">Kafka ideas</h2>
+<section id="slide-org2069284">
+<h2 id="org2069284">Kafka ideas</h2>
 <ul>
 <li class="fragment appear">replicated log</li>
 <li class="fragment appear">↳ persistence</li>
@@ -45,55 +45,55 @@
 </ul>
 
 </section>
-<section id="slide-org95a086d">
-<h3 id="org95a086d">disk love</h3>
+<section id="slide-org369ae4b">
+<h3 id="org369ae4b">disk love</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-orgd006fe3">
-<h2 id="orgd006fe3">pictures</h2>
-<div class="outline-text-2" id="text-orgd006fe3">
+<section id="slide-orge07d759">
+<h2 id="orge07d759">pictures</h2>
+<div class="outline-text-2" id="text-orge07d759">
 </div>
 </section>
-<section id="slide-org020dc4c" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png" data-background-size="60%">
-<h3 id="org020dc4c">.</h3>
+<section id="slide-org7fb02fb" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png" data-background-size="60%">
+<h3 id="org7fb02fb">.</h3>
 
 
 </section>
-<section id="slide-orgcd55fd3" data-background="https://kafka.apache.org/21/images/log_consumer.png" data-background-size="60%">
-<h3 id="orgcd55fd3">.</h3>
+<section id="slide-orgda40ac5" data-background="https://kafka.apache.org/21/images/log_consumer.png" data-background-size="60%">
+<h3 id="orgda40ac5">.</h3>
 
 </section>
-<section id="slide-orgf8d39e4" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png" data-background-size="60%">
-<h3 id="orgf8d39e4">.</h3>
+<section id="slide-orgc4c2c06" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png" data-background-size="60%">
+<h3 id="orgc4c2c06">.</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-org0cda251">
-<h2 id="org0cda251">producer</h2>
+<section id="slide-org8406c26">
+<h2 id="org8406c26">producer</h2>
 <div class="org-src-container">
 
-<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>produce conn <span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">:key</span> <span style="color: #a45bad;">123</span> <span style="color: #a45bad;">:value</span> <span style="color: #2d9574;">"hello"</span> <span style="color: #a45bad;">:topic</span> <span style="color: #2d9574;">"queue-123"</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>produce conn <span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">:key</span> <span style="color: #a45bad;">123</span> <span style="color: #a45bad;">:value</span> <span style="color: #2d9574;">"hello"</span> <span style="color: #a45bad;">:topic</span> <span style="color: #2d9574;">"greetings"</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
 </pre>
 </div>
 
 </section>
 </section>
 <section>
-<section id="slide-org16b5336">
-<h2 id="org16b5336">consumer</h2>
+<section id="slide-orgc421103">
+<h2 id="orgc421103">consumer</h2>
 <div class="org-src-container">
 
-<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>consume conn <span style="color: #2d9574;">"queue-123"</span> println<span style="color: #4f97d7;">)</span>
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>consume conn <span style="color: #2d9574;">"greetings"</span> println<span style="color: #4f97d7;">)</span>
 </pre>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgeb6d33e">
-<h2 id="orgeb6d33e">resources</h2>
+<section id="slide-orgc13dc46">
+<h2 id="orgc13dc46">resources</h2>
 <p>
 <a href="https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8">brief blog post about with unique focus</a>
 </p>
