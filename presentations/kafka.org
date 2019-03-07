@@ -10,7 +10,7 @@
 # REVEAL_TITLE_SLIDE_BACKGROUND
 
 
-*    
+* .    
    :PROPERTIES:
    :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png
    :reveal_background_size: 60%
@@ -18,7 +18,7 @@
 
 * replicated log
 
-**    
+**     
    :PROPERTIES:
    :reveal_background: https://kafka.apache.org/21/images/log_consumer.png
    :reveal_background_size: 60%
@@ -33,7 +33,7 @@
    :END:
 
 
-**      
+**  .   
    :PROPERTIES:
    :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png
    :reveal_background_size: 60%
