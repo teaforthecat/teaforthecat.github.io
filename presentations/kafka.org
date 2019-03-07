@@ -10,7 +10,7 @@
 # REVEAL_TITLE_SLIDE_BACKGROUND
 
 
-**
+*    
    :PROPERTIES:
    :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png
    :reveal_background_size: 60%
@@ -18,7 +18,7 @@
 
 * replicated log
 
-**
+**    
    :PROPERTIES:
    :reveal_background: https://kafka.apache.org/21/images/log_consumer.png
    :reveal_background_size: 60%
@@ -26,14 +26,14 @@
 
 
 
-*
+*  
    :PROPERTIES:
    :reveal_background: https://s3.amazonaws.com/growlermag-media/ElectricFetusTurntables-7.jpg
    :reveal_background_size: 60%
    :END:
 
 
-**
+**      
    :PROPERTIES:
    :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png
    :reveal_background_size: 60%
@@ -49,13 +49,13 @@
 - ↳ confidence
 - ↳ design
 
-***
+***  
    :PROPERTIES:
    :reveal_background: https://www.scaleway.com/assets/images/docs/schema-kafka.png
    :reveal_background_size: 60%
    :END:
 
-***
+***  
    :PROPERTIES:
    :reveal_background: https://res.infoq.com/presentations/cloud-native-kafka-netflix/en/slides/sl32-1523574474681.jpg
    :reveal_background_size: 60%
@@ -74,13 +74,13 @@
 (consume conn "greetings" println)
 #+END_SRC
 
-*
+*  
    :PROPERTIES:
    :reveal_background: https://www.americasquarterly.org/sites/default/files/images/IMG_3953_cropped.jpg
    :reveal_background_size: 60%
    :END:
 
-**
+** 	 
    :PROPERTIES:
    :reveal_background: https://kafka.apache.org/21/images/log_compaction.png
    :reveal_background_size: 60%
