@@ -31,10 +31,39 @@
 </section>
 
 
+</section>
+<section id="slide-org1e09829" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png" data-background-size="60%">
+<h3 id="org1e09829"></h3>
 
+</section>
+</section>
 <section>
-<section id="slide-org2069284">
-<h2 id="org2069284">Kafka ideas</h2>
+<section id="slide-org71113cc">
+<h2 id="org71113cc">replicated log</h2>
+<div class="outline-text-2" id="text-org71113cc">
+</div>
+</section>
+<section id="slide-orgfb01778" data-background="https://kafka.apache.org/21/images/log_consumer.png" data-background-size="60%">
+<h3 id="orgfb01778"></h3>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org4eaf78e" data-background="https://s3.amazonaws.com/growlermag-media/ElectricFetusTurntables-7.jpg" data-background-size="60%">
+<h2 id="org4eaf78e"></h2>
+</section>
+<section id="slide-org2caa97b" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png" data-background-size="60%">
+<h3 id="org2caa97b"></h3>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3cef6c7">
+<h2 id="org3cef6c7">Kafka</h2>
 <ul>
 <li class="fragment appear">replicated log</li>
 <li class="fragment appear">↳ persistence</li>
@@ -45,34 +74,21 @@
 </ul>
 
 </section>
-<section id="slide-org369ae4b">
-<h3 id="org369ae4b">disk love</h3>
+<section id="slide-org4e214ed" data-background="https://www.scaleway.com/assets/images/docs/schema-kafka.png" data-background-size="60%">
+<h4 id="org4e214ed"></h4>
+
+</section>
+<section id="slide-org2630f87" data-background="https://res.infoq.com/presentations/cloud-native-kafka-netflix/en/slides/sl32-1523574474681.jpg" data-background-size="60%">
+<h4 id="org2630f87"></h4>
+
+
+
 
 </section>
 </section>
 <section>
-<section id="slide-orge07d759">
-<h2 id="orge07d759">pictures</h2>
-<div class="outline-text-2" id="text-orge07d759">
-</div>
-</section>
-<section id="slide-org7fb02fb" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png" data-background-size="60%">
-<h3 id="org7fb02fb">.</h3>
-
-
-</section>
-<section id="slide-orgda40ac5" data-background="https://kafka.apache.org/21/images/log_consumer.png" data-background-size="60%">
-<h3 id="orgda40ac5">.</h3>
-
-</section>
-<section id="slide-orgc4c2c06" data-background="https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png" data-background-size="60%">
-<h3 id="orgc4c2c06">.</h3>
-
-</section>
-</section>
-<section>
-<section id="slide-org8406c26">
-<h2 id="org8406c26">producer</h2>
+<section id="slide-org7f0d7de">
+<h2 id="org7f0d7de">producer</h2>
 <div class="org-src-container">
 
 <pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>produce conn <span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">:key</span> <span style="color: #a45bad;">123</span> <span style="color: #a45bad;">:value</span> <span style="color: #2d9574;">"hello"</span> <span style="color: #a45bad;">:topic</span> <span style="color: #2d9574;">"greetings"</span><span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>
@@ -82,20 +98,32 @@
 </section>
 </section>
 <section>
-<section id="slide-orgc421103">
-<h2 id="orgc421103">consumer</h2>
+<section id="slide-org61e97ff">
+<h2 id="org61e97ff">consumer</h2>
 <div class="org-src-container">
 
 <pre  class="src src-clojure"><span style="color: #4f97d7;">(</span>consume conn <span style="color: #2d9574;">"greetings"</span> println<span style="color: #4f97d7;">)</span>
 </pre>
 </div>
+
 </section>
 </section>
 <section>
-<section id="slide-orgc13dc46">
-<h2 id="orgc13dc46">resources</h2>
+<section id="slide-orga875119" data-background="https://www.americasquarterly.org/sites/default/files/images/IMG_3953_cropped.jpg" data-background-size="60%">
+<h2 id="orga875119"></h2>
+</section>
+<section id="slide-orga1bb19c" data-background="https://kafka.apache.org/21/images/log_compaction.png" data-background-size="60%">
+<h3 id="orga1bb19c"></h3>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgfeb405c">
+<h2 id="orgfeb405c">resources</h2>
 <p>
-<a href="https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8">brief blog post about with unique focus</a>
+<a href="https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8">brief blog post with unique focus</a>
 </p>
 
 <p>
@@ -103,8 +131,26 @@
 </p>
 
 <p>
-<a href="https://kafka.apache.org/documentation/#persistence">an afternoon of dizzyness</a>
+<a href="https://kafka.apache.org/documentation/#design">an afternoon of dizzyness</a>
 </p>
+
+<p>
+<a href="https://jack-vanlightly.com/blog/2017/12/3/rabbitmq-vs-kafka-series-introduction">RabbitMQ vs Kafka comparison</a>
+</p>
+
+<p>
+<a href="http://javierholguera.com/2018/06/13/kafka-defaults-that-you-should-re-consider-i/">thoughts on default conf values</a>
+</p>
+
+</section>
+<section id="slide-orgc576468">
+<h3 id="orgc576468">best configuration for a message queue</h3>
+<ul>
+<li>topic: change min.insync.replicas to replication - 1</li>
+<li>topic: replication 3, min.insync 2 (typical)</li>
+<li>producer: acks all</li>
+
+</ul>
 </section>
 </section>
 </div>

@@ -10,8 +10,38 @@
 # REVEAL_TITLE_SLIDE_BACKGROUND
 
 
+**
+   :PROPERTIES:
+   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png
+   :reveal_background_size: 60%
+   :END:
 
-* Kafka ideas
+* replicated log
+
+**
+   :PROPERTIES:
+   :reveal_background: https://kafka.apache.org/21/images/log_consumer.png
+   :reveal_background_size: 60%
+   :END:
+
+
+
+*
+   :PROPERTIES:
+   :reveal_background: https://s3.amazonaws.com/growlermag-media/ElectricFetusTurntables-7.jpg
+   :reveal_background_size: 60%
+   :END:
+
+
+**
+   :PROPERTIES:
+   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png
+   :reveal_background_size: 60%
+   :END:
+
+
+
+* Kafka
 #+ATTR_REVEAL: :frag (appear)
 - replicated log
 - ↳ persistence
@@ -19,28 +49,20 @@
 - ↳ confidence
 - ↳ design
 
-** disk love
-
-* pictures
-
-** .
+***
    :PROPERTIES:
-   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/producer_consumer.png
+   :reveal_background: https://www.scaleway.com/assets/images/docs/schema-kafka.png
+   :reveal_background_size: 60%
+   :END:
+
+***
+   :PROPERTIES:
+   :reveal_background: https://res.infoq.com/presentations/cloud-native-kafka-netflix/en/slides/sl32-1523574474681.jpg
    :reveal_background_size: 60%
    :END:
 
 
-** .
-   :PROPERTIES:
-   :reveal_background: https://kafka.apache.org/21/images/log_consumer.png
-   :reveal_background_size: 60%
-   :END:
 
-** .
-   :PROPERTIES:
-   :reveal_background: https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/partitioned_log_0.png
-   :reveal_background_size: 60%
-   :END:
 
 * producer
 #+BEGIN_SRC clojure
@@ -51,10 +73,34 @@
 #+BEGIN_SRC clojure
 (consume conn "greetings" println)
 #+END_SRC
+
+*
+   :PROPERTIES:
+   :reveal_background: https://www.americasquarterly.org/sites/default/files/images/IMG_3953_cropped.jpg
+   :reveal_background_size: 60%
+   :END:
+
+**
+   :PROPERTIES:
+   :reveal_background: https://kafka.apache.org/21/images/log_compaction.png
+   :reveal_background_size: 60%
+   :END:
+
+
+
 * resources
 
-[[https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8][brief blog post about with unique focus]]
+[[https://hackernoon.com/a-super-quick-comparison-between-kafka-and-message-queues-e69742d855a8][brief blog post with unique focus]]
 
 [[https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines][performance analysis from 2014]]
 
-[[https://kafka.apache.org/documentation/#persistence][an afternoon of dizzyness]]
+[[https://kafka.apache.org/documentation/#design][an afternoon of dizzyness]]
+
+[[https://jack-vanlightly.com/blog/2017/12/3/rabbitmq-vs-kafka-series-introduction][RabbitMQ vs Kafka comparison]]
+
+[[http://javierholguera.com/2018/06/13/kafka-defaults-that-you-should-re-consider-i/][thoughts on default conf values]]
+
+** best configuration for a message queue
+- topic: change min.insync.replicas to replication - 1
+- topic: replication 3, min.insync 2 (typical)
+- producer: acks all
